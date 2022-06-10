@@ -1,3 +1,16 @@
+/*  
+    Student ID           :- A00257629
+    Student Name         :- Aman Thakur
+    
+    AND
+
+    Student ID           :- A00240755
+    Student Name         :- Rushabh Shah
+    
+    Program & Assignment :- MAPD / 
+    Program Defination   :- JAV1001-Lab2 Methods And Arrays
+    Program Description  :- JAV-1001 - 50733 - App Development for Android - 202205 - 001
+ */
 public class Dice {
     private String name;
     private int sides;

@@ -20,36 +20,45 @@ public class ClassesObjects {
 
         // ************ Create different sized dice using each constructor ************
         // Constructor 1: Default Dice
+        System.out.println("\n");
+        System.out.println("1-");
         System.out.println("This is default dice");
         Dice dice = new Dice();
         sideUp = dice.getSideUp();
         sides = dice.getSides();
         name = dice.getDiceName();
         showDiceData(sides, sideUp, name);
+        System.out.println("\n");
 
         // ************ Roll the dice and display their results (before and after)
         // ************
         diceResultBeforeAndAfter(dice);
 
         // Constructor 2: Dice with number of sides parameter
+        System.out.println("\n");
+        System.out.println("2-");
         System.out.println("This is  dice with number of sides parameter");
         Dice diceWithSides = new Dice(10);
         sideUp = diceWithSides.getSideUp();
         sides = diceWithSides.getSides();
         name = diceWithSides.getDiceName();
         showDiceData(sides, sideUp, name);
+        System.out.println("\n");
 
         // ************ Roll the dice and display their results (before and after)
         // ************
         diceResultBeforeAndAfter(diceWithSides);
 
         // Constructor 3: Dice with number of sides and name parameter
+        System.out.println("\n");
+        System.out.println("3-");
         System.out.println("This is dice with number of sides and name parameter");
         Dice diceWithNameAndSides = new Dice(10, "Death Roll");
         sideUp = diceWithNameAndSides.getSideUp();
         sides = diceWithNameAndSides.getSides();
         name = diceWithNameAndSides.getDiceName();
         showDiceData(sides, sideUp, name);
+        System.out.println("\n");
 
         // ************ Roll the dice and display their results (before and after)
         // ************
@@ -57,12 +66,17 @@ public class ClassesObjects {
 
         // ************ Choose one Die object and set it to show it's highest value
         // ************
+        System.out.println("\n");
+        System.out.println("4-");
         diceWithSides.showHighestValue();
 
         // ************ BONUS (optional): create 5 six-sided dice. Roll each Die in a
         // loop until you get 5 of a kind. Count and display the number of rolls.
         // ************
+        System.out.println("\n");
+        System.out.println("5-");
         find5OfKind();
+        System.out.println("\n");
     }
 
     // This method takes sides, sideUp and name as argument and show it to user

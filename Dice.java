@@ -8,7 +8,7 @@
     Student Name         :- Rushabh Shah
     
     Program & Assignment :- MAPD / 
-    Program Defination   :- JAV1001-Lab2 Methods And Arrays
+    Program Defination   :- JAV1001-Lab 3 - Classes/ Objects
     Program Description  :- JAV-1001 - 50733 - App Development for Android - 202205 - 001
  */
 public class Dice {

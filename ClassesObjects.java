@@ -108,21 +108,45 @@ public class ClassesObjects {
             diceArray[i] = new Dice();
         }
         int prevSide = -1;
-        int i = 0;
         int count = 0;
-        while (i < diceArray.length) {
-            Dice dice = diceArray[i];
-            dice.roll();
-            int sideUp = dice.getSideUp();
-            if (prevSide == -1) {
-                prevSide = sideUp;
-            } else if (prevSide != sideUp) {
-                i = 0;
-                count += 1;
-            } else {
-                i += 1;
+
+        /* This is the logic to roll the dice one by on */
+        //
+        // int i = 0;
+        // while (i < diceArray.length) {
+        // Dice dice = diceArray[i];
+        // dice.roll();
+        // int sideUp = dice.getSideUp();
+        // if (prevSide == -1) {
+        // prevSide = sideUp;
+        // } else if (prevSide != sideUp) {
+        // i = 0;
+        // count += 1;
+        // } else {
+        // i += 1;
+        // }
+        // }
+
+        /* This is the logic to roll all dice at once */
+        boolean notFound = true;
+        do {
+            notFound = false;
+            for (Dice dice : diceArray) {
+                dice.roll();
+                int sideUp = dice.getSideUp();
+                if (prevSide == -1) {
+                    prevSide = sideUp;
+                } else if (prevSide != sideUp) {
+                    notFound = true;
+                    break;
+                } else {
+                    prevSide = sideUp;
+                }
             }
-        }
+            if (notFound) {
+                count += 1;
+            }
+        } while (notFound);
         System.out.println("Found 5 of a kind in: " + count);
     }
 }
